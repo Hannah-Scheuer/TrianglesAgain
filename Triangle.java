@@ -24,5 +24,20 @@ public class Triangle{
     double semi = getPerimeter()/2;
     return Math.sqrt(semi*(semi-v1.distanceTo(v2))*(semi-v1.distanceTo(v3))*(semi-v3.distanceTo(v2)));
   }
-  
+
+  public String classify(){
+    double side1 = Math.round(v1.distanceTo(v2)*10000)/10000;
+    double side2 = Math.round(v1.distanceTo(v3)*10000)/10000;
+    double side3 = Math.round(v2.distanceTo(v2)*10000)/10000;
+    if (side1==side2 && side1==side3 && side2==side3){
+      return "equilateral";
+    }
+    else if(side1==side2 || side1==side3 || side2==side3){
+      return "isosceles";
+    }
+    else{
+      return "scalene";
+    }
+  }
+
 }
