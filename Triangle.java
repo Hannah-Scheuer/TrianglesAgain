@@ -28,7 +28,7 @@ public class Triangle{
   public String classify(){
     double side1 = Math.round(v1.distanceTo(v2)*10000)/10000;
     double side2 = Math.round(v1.distanceTo(v3)*10000)/10000;
-    double side3 = Math.round(v2.distanceTo(v2)*10000)/10000;
+    double side3 = Math.round(v2.distanceTo(v3)*10000)/10000;
     if (side1==side2 && side1==side3 && side2==side3){
       return "equilateral";
     }
