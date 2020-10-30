@@ -19,4 +19,12 @@ public class Point{
    return y;
  }
 
-}  
+ public double distanceTo(Point other){
+   return Math.sqrt(Math.pow((other.x-x),2)+(Math.pow((other.y-y),2)));
+ }
+
+ public boolean equals( Point other) {
+   return x==other.x && y == other.y;
+ }
+
+}
